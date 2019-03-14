@@ -13,6 +13,7 @@ class HomePage extends Component{
         inputsContent: InputsHelper,
         dbState: DBHelper
     }
+    
     render(){
         return(
             <div>

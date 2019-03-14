@@ -6,13 +6,29 @@ const table = props => {
 
     return(
         <table>
-            {
-                props.db.map(db => (
-                    <div>
-                        oi
-                    </div>
-                ))
-            }
+            <thead>
+                <tr>
+                    <td>Placa</td>
+                    <td>Modelo</td>
+                    <td>Cor</td>
+                    <td>Ano</td>
+                    <td>Chassi</td>
+                    <td>Revisão</td>
+                    <td>Observações</td>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    props.db.map((db, idxC) => (
+                        <tr key={db.id}>
+                            {Object.keys(db.car).map((carTd, idx)=>(
+                                <td key={idx}>{props.db[idxC].car[carTd]}</td>
+                                
+                            ))}
+                        </tr>
+                    ))
+                }
+            </tbody>
         </table>
     );
 }
