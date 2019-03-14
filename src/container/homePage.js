@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 
 import Form from '../components/Form/Form';
@@ -8,31 +8,29 @@ import Table from '../components/Table/Table';
 
 import './homePage.scss';
 
-class HomePage extends Component{
+class HomePage extends Component {
     state = {
         inputsContent: InputsHelper,
         dbState: DBHelper,
         dataDownload: []
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <main>
                 <Form inputs={this.state.inputsContent}
-                      changed={this.changed} 
-                      submit={this.submit}/>
+                    changed={this.changed}
+                    submit={this.submit} />
                 <Table db={this.state.dbState}
-                       downloadData={this.downloadData}
-                       dataDownload={this.state.dataDownload}/>
-
-                
+                    downloadData={this.downloadData}
+                    dataDownload={this.state.dataDownload} />
             </main>
         )
     }
 
-    downloadData = () =>{
+    downloadData = () => {
         let data = [];
-        this.state.dbState.forEach(element => {      
+        this.state.dbState.forEach(element => {
             let dataEl = {
                 id: element.id,
                 marca: element.car['marca'],
@@ -43,31 +41,28 @@ class HomePage extends Component{
                 cor: element.car['cor'],
                 obs: element.car['obs'],
             };
-            
+
             data.push(dataEl);
         });
 
-        console.log(data)
-
-        this.setState({dataDownload: data});
+        this.setState({ dataDownload: data });
     }
 
     changed = (event, idx) => {
-        console.log(idx)
-        const inputsChange = {...this.state.inputsContent};
-        const inputChange = {...inputsChange[idx]}
+        const inputsChange = { ...this.state.inputsContent };
+        const inputChange = { ...inputsChange[idx] }
         inputChange.value = event.target.value;
         inputsChange[idx] = inputChange;
 
-        this.setState({inputsContent: inputsChange})
+        this.setState({ inputsContent: inputsChange })
     }
 
     submit = (e) => {
         e.preventDefault();
         const dataCar = this.state.inputsContent;
-        if(dataCar['marca'].value === '' ||
-           dataCar['renavam'].value === '' ||
-           dataCar['placa'].value === ''){
+        if (dataCar['marca'].value === '' ||
+            dataCar['renavam'].value === '' ||
+            dataCar['placa'].value === '') {
             return;
         }
         const data = {
@@ -83,16 +78,14 @@ class HomePage extends Component{
             }
         }
 
-        for(let data in dataCar){
+        for (let data in dataCar) {
             dataCar[data].value = ''
         }
 
         const tableCar = [...this.state.dbState];
         tableCar.push(data);
 
-        this.setState({dbState: tableCar, inputChange: dataCar});
-
-        console.log(data)
+        this.setState({ dbState: tableCar, inputChange: dataCar });
     }
 }
 

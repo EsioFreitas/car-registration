@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { CSVLink } from "react-csv";
 
 import './Table.scss';
 
 const table = props => {
 
-    return(
+    return (
         <Fragment>
             <table>
                 <caption>Carros cadastrados</caption>
@@ -24,7 +24,7 @@ const table = props => {
                     {
                         props.db.map((db, idxC) => (
                             <tr key={db.id}>
-                                {Object.keys(db.car).map((carTd, idx)=>(
+                                {Object.keys(db.car).map((carTd, idx) => (
                                     <td key={idx}>{props.db[idxC].car[carTd]}</td>
                                 ))}
                             </tr>
@@ -32,10 +32,10 @@ const table = props => {
                     }
                 </tbody>
             </table>
-            <CSVLink data={props.dataDownload} 
-                         onClick={()=>props.downloadData()}
-                         filename={"car-registration.csv"}
-                         className="btn btn-primary">
+            <CSVLink data={props.dataDownload}
+                onClick={() => props.downloadData()}
+                filename={"car-registration.csv"}
+                className="btn btn-primary">
                 Download me
             </CSVLink>;
         </Fragment>
