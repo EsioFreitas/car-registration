@@ -12,7 +12,7 @@ const table = props => {
                     <td>Modelo</td>
                     <td>Cor</td>
                     <td>Ano</td>
-                    <td>Chassi</td>
+                    <td>Renavam</td>
                     <td>Revisão</td>
                     <td>Observações</td>
                 </tr>
@@ -23,7 +23,6 @@ const table = props => {
                         <tr key={db.id}>
                             {Object.keys(db.car).map((carTd, idx)=>(
                                 <td key={idx}>{props.db[idxC].car[carTd]}</td>
-                                
                             ))}
                         </tr>
                     ))

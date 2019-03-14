@@ -13,11 +13,11 @@ class HomePage extends Component{
         inputsContent: InputsHelper,
         dbState: DBHelper
     }
-    
+
     render(){
         return(
             <div>
-                <Form inputs={this.state.inputsContent}/>
+                <Form inputs={this.state.inputsContent} onChange value/>
                 <Table db={this.state.dbState}/>
             </div>
         )
