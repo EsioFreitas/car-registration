@@ -18,6 +18,7 @@ class HomePage extends Component {
     render() {
         return (
             <main>
+                <h1>Cadastre seu veículo</h1>
                 <Form inputs={this.state.inputsContent}
                     changed={this.changed}
                     submit={this.submit} />
