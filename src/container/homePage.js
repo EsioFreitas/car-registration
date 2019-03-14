@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { CSVLink, CSVDownload } from "react-csv";
+
 
 import Form from '../components/Form/Form';
 import InputsHelper from '../helpers/inputs';
@@ -7,11 +9,11 @@ import Table from '../components/Table/Table';
 
 import './homePage.scss';
 
-
 class HomePage extends Component{
     state = {
         inputsContent: InputsHelper,
-        dbState: DBHelper
+        dbState: DBHelper,
+        dataDownload: []
     }
 
     render(){
@@ -21,8 +23,37 @@ class HomePage extends Component{
                       changed={this.changed} 
                       submit={this.submit}/>
                 <Table db={this.state.dbState}/>
+
+                <CSVLink data={this.state.dataDownload} 
+                         onClick={()=>this.downloadData()}
+                         filename={"car-registration.csv"}
+                         className="btn btn-primary">
+                    Download me
+                </CSVLink>;
             </div>
         )
+    }
+
+    downloadData = () =>{
+        let data = [];
+        this.state.dbState.forEach(element => {      
+            let dataEl = {
+                id: element.id,
+                marca: element.car['marca'],
+                modelo: element.car['modelo'],
+                ano: element.car['ano'],
+                renavam: element.car['renavam'],
+                placa: element.car['placa'],
+                cor: element.car['cor'],
+                obs: element.car['obs'],
+            };
+            
+            data.push(dataEl);
+        });
+
+        console.log(data)
+
+        this.setState({dataDownload: data});
     }
 
     changed = (event, idx) => {
