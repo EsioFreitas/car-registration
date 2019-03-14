@@ -11,13 +11,13 @@ const table = props => {
                 <caption>Carros cadastrados</caption>
                 <thead>
                     <tr>
-                        <td>Marca</td>
-                        <td>Modelo</td>
-                        <td>Ano</td>
-                        <td>Renavam</td>
-                        <td>Placa</td>
-                        <td>Cor</td>
-                        <td>Observações</td>
+                        <td id='marca'>Marca</td>
+                        <td id='modelo'>Modelo</td>
+                        <td id='ano'>Ano</td>
+                        <td id='renavam'>Renavam</td>
+                        <td id='placa'>Placa</td>
+                        <td id='cor'>Cor</td>
+                        <td id='obs'>Observações</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,7 +37,7 @@ const table = props => {
                 filename={"car-registration.csv"}
                 className="btn btn-primary">
                 Download me
-            </CSVLink>;
+            </CSVLink>
         </Fragment>
     );
 }

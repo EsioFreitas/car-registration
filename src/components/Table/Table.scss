@@ -1,0 +1,39 @@
+table{
+    background-color: #f7f7f7;
+    margin: 1rem;
+    max-height: 65vh;
+    display: inline-block;
+    box-shadow: -1px 2px 5px #353535;
+    padding: 1rem;
+    line-height: 2;
+    width: 90%;
+
+    border-spacing: 10rem;
+    border-collapse: collapse;
+
+    #marca{
+        width: 10%;
+    }
+
+    #ano{
+        width: 10%;
+    }
+
+    #placa{
+        width: 10%;
+    }
+
+    #obs{
+        width: 20%;
+    }
+    
+    th, td {
+        max-width: 200px;
+        word-wrap: break-word;
+        padding: 3px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #353535 #ccc;
+    }
+
+}
