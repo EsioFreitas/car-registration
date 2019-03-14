@@ -10,13 +10,13 @@ const input = props => {
             inputElement = <input {...props.elementConfig} value={props.value} onChange={props.changed} />;
             break;
         case ('textarea'):
-            inputElement = <textarea {...props.elementConfig} value={props.value} onChange={props.changed} />;
+            inputElement = <textarea {...props.elementConfig} value={props.value} onChange={props.changed} rows='4'/>;
             break;
         default:
             break;
     }
     return (
-        <label>{props.label}:
+        <label className='form__label'>{props.label}:
             {inputElement}
         </label>
     )
