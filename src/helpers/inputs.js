@@ -1,19 +1,10 @@
 const inputs = {
-    placa: {
-        label: "Placa",
-        type: 'input',
-        config: {
-            type: 'text',
-            placeholder: ''
-        },
-        value: '',
-    },
     marca: {
         label: "Marca",
         type: 'input',
         config: {
             type: 'text',
-            placeholder: ''
+            placeholder: 'Honda'
         },
         value: '',
     },
@@ -22,7 +13,7 @@ const inputs = {
         type: 'input',
         config: {
             type: 'text',
-            placeholder: ''
+            placeholder: 'Fit EXL 1.5 Flex 16V 5p Mec'
         },
         value: '',
     },
@@ -30,44 +21,46 @@ const inputs = {
         label: "Ano",
         type: 'input',
         config: {
-            type: 'text',
-            placeholder: ''
+            type: 'number',
+            placeholder: '2009'
         },
         value: '',
     },
-    cor: {
+    renavam: {
+        label: "Renavam",
+        type: 'input',
+        config: {
+            type: 'text',
+            placeholder: '69047446258'
+        },
+        value: '',
+    },
+    placa: {
+        label: "Placa",
+        type: 'input',
+        config: {
+            type: 'text',
+            placeholder: 'MZS-2703'
+        },
+        value: '',
+    },
+    Cor: {
         label: "Cor",
         type: 'input',
         config: {
             type: 'text',
-            placeholder: ''
-        },
-        value: '',
-    },
-    revisao: {
-        label: "Revisão",
-        type: 'input',
-        config: {
-            type: 'text',
-            placeholder: ''
-        },
-        value: '',
-    },
-    chassi: {
-        label: "Chassi",
-        type: 'input',
-        config: {
-            type: 'text',
-            placeholder: ''
+            placeholder: 'Verde'
         },
         value: '',
     },
     obs: {
         label: "Observações",
-        type: 'input',
+        type: 'textarea',
         config: {
             type: 'text',
-            placeholder: ''
+            placeholder: 'Coloque detalhes inportantes sobre seu veículo',
+            min: '1000',
+            max: '2020'
         },
         value: '',
     }

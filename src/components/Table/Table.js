@@ -8,12 +8,12 @@ const table = props => {
         <table>
             <thead>
                 <tr>
-                    <td>Placa</td>
+                    <td>Marca</td>
                     <td>Modelo</td>
-                    <td>Cor</td>
                     <td>Ano</td>
                     <td>Renavam</td>
-                    <td>Revisão</td>
+                    <td>Placa</td>
+                    <td>Cor</td>
                     <td>Observações</td>
                 </tr>
             </thead>
