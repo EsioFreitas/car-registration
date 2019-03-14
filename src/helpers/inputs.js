@@ -44,7 +44,7 @@ const inputs = {
         },
         value: '',
     },
-    Cor: {
+    cor: {
         label: "Cor",
         type: 'input',
         config: {
