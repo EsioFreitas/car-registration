@@ -6,7 +6,7 @@ import './Table.scss';
 const table = props => {
 
     return (
-        <Fragment>
+        <div className="table">
             <table>
                 <caption>Carros cadastrados</caption>
                 <thead>
@@ -36,9 +36,9 @@ const table = props => {
                 onClick={() => props.downloadData()}
                 filename={"car-registration.csv"}
                 className="btn btn-primary">
-                Download me
+                Download
             </CSVLink>
-        </Fragment>
+        </div>
     );
 }
 

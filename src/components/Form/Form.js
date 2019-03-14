@@ -17,7 +17,7 @@ const form = props => (
             ))
         }
         <div onClick={(e) => props.submit(e)}
-            className='btn'>
+            className='btn btn-cadastro'>
             Cadastrar Veículo
         </div>
     </form>
