@@ -4,7 +4,13 @@ import './Form.scss';
 
 const form = props => (
     <form>
-        oi
+        {
+            Object.keys(props.inputs).map(input => (
+                <div>
+                    
+                </div>
+            ))
+        }
     </form>
 );
 
