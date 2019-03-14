@@ -17,10 +17,20 @@ class HomePage extends Component{
     render(){
         return(
             <div>
-                <Form inputs={this.state.inputsContent} onChange value/>
+                <Form inputs={this.state.inputsContent} changed={this.changed}/>
                 <Table db={this.state.dbState}/>
             </div>
         )
+    }
+
+    changed = (event, idx) => {
+        console.log(idx)
+        const inputsChange = {...this.state.inputsContent};
+        const inputChange = {...inputsChange[idx]}
+        inputChange.value = event.target.value;
+        inputsChange[idx] = inputChange;
+
+        this.setState({inputsContent: inputsChange})
     }
 }
 
