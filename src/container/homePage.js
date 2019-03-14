@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { CSVLink, CSVDownload } from "react-csv";
 
 
 import Form from '../components/Form/Form';
@@ -18,19 +17,16 @@ class HomePage extends Component{
 
     render(){
         return(
-            <div>
+            <main>
                 <Form inputs={this.state.inputsContent}
                       changed={this.changed} 
                       submit={this.submit}/>
-                <Table db={this.state.dbState}/>
+                <Table db={this.state.dbState}
+                       downloadData={this.downloadData}
+                       dataDownload={this.state.dataDownload}/>
 
-                <CSVLink data={this.state.dataDownload} 
-                         onClick={()=>this.downloadData()}
-                         filename={"car-registration.csv"}
-                         className="btn btn-primary">
-                    Download me
-                </CSVLink>;
-            </div>
+                
+            </main>
         )
     }
 
@@ -66,7 +62,8 @@ class HomePage extends Component{
         this.setState({inputsContent: inputsChange})
     }
 
-    submit = () => {
+    submit = (e) => {
+        e.preventDefault();
         const dataCar = this.state.inputsContent;
         if(dataCar['marca'].value === '' ||
            dataCar['renavam'].value === '' ||

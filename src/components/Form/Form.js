@@ -5,7 +5,7 @@ import Input from '../UI/Input/Input';
 import './Form.scss';
 
 const form = props => (
-    <div>
+    <form>
         {
             Object.keys(props.inputs).map(input => (
                 <Input  key={input} 
@@ -16,10 +16,10 @@ const form = props => (
                         label={props.inputs[input].label}/>
             ))
         }
-        <button onClick={props.submit}>
+        <button onClick={(e)=>props.submit(e)}>
             Cadastrar Veículo
         </button>
-    </div>
+    </form>
 );
 
 export default form;

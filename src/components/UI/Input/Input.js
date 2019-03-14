@@ -16,11 +16,9 @@ const input = props => {
             break;
     }
     return(
-        <div>
-            <label>{props.label}:
-                {inputElement}
-            </label>
-        </div>
+        <label>{props.label}:
+            {inputElement}
+        </label>
     )
 }
 
