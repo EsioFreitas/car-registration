@@ -1,8 +1,9 @@
 html,body{
     box-sizing: border-box;
-    padding: .5rem;
+    padding: 1rem;
     color: #035354;
     background-color: #CFF5EE;
+
 }
 
 h1{

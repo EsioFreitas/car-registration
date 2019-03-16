@@ -19,18 +19,18 @@ class HomePage extends Component {
         return (
             <main>
                 <h1>Cadastre seu veículo</h1>
-                <div className='container'>
-                    <div className='container__form'>
-                        <Form inputs={this.state.inputsContent}
+               
+                        {/* <Form inputs={this.state.inputsContent}
                             changed={this.changed}
-                            submit={this.submit} />
-                    </div>
-                    <div className='container__table'>
+                            submit={this.submit} /> */}
+                    
+                    
                         <Table db={this.state.dbState}
                             downloadData={this.downloadData}
-                            dataDownload={this.state.dataDownload} />
-                    </div>
-                </div>
+                            dataDownload={this.state.dataDownload} 
+                            tableClasses='t'/>
+                   
+               
             </main>
         )
     }
