@@ -5,6 +5,7 @@ import Form from '../components/Form/Form';
 import InputsHelper from '../helpers/inputs';
 import DBHelper from '../helpers/DB';
 import Table from '../components/Table/Table';
+import Modal from '../components/UI/Modal/Modal';
 
 import './homePage.scss';
 
@@ -19,10 +20,15 @@ class HomePage extends Component {
         return (
             <main>
                 <h1>Cadastre seu veículo</h1>
-               
-                        {/* <Form inputs={this.state.inputsContent}
+
+                    <Modal show='true'>
+                    <h2>cadastro</h2>
+                    <Form inputs={this.state.inputsContent}
                             changed={this.changed}
-                            submit={this.submit} /> */}
+                            submit={this.submit} /> 
+                    </Modal>
+               
+                       
                     
                     
                         <Table db={this.state.dbState}

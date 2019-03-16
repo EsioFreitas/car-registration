@@ -16,9 +16,14 @@ const form = props => (
                     label={props.inputs[input].label} />
             ))
         }
-        <div onClick={(e) => props.submit(e)}
-            className='btn btn-cadastro'>
-            Cadastrar Veículo
+
+        <div className='form__btns'>
+
+            <div className='btn'>Cancelar</div>
+            <div onClick={(e) => props.submit(e)}
+                className='btn btn-cadastro'>
+                Cadastrar Veículo
+            </div>
         </div>
     </form>
 );
