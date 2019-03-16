@@ -6,7 +6,7 @@ import './Modal.scss'
 
 const modal = props => (
     <Fragment>
-        <Backdrop show clicked/>
+        <Backdrop show={props.show} clicked={props.cancelSubmit}/>
         <div className='modal'
              style={{
                 transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',

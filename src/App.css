@@ -20,6 +20,7 @@ h1{
     cursor: pointer;
     background-color: #50A5A6;
     transition: .5s;
+    font-weight: bold;
 }
 
 .btn:hover{

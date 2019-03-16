@@ -19,10 +19,13 @@ const form = props => (
 
         <div className='form__btns'>
 
-            <div className='btn'>Cancelar</div>
+            <div className='btn btn--cancel'
+                 onClick={props.cancelSubmit}>
+                Cancelar
+            </div>
             <div onClick={(e) => props.submit(e)}
                 className='btn btn-cadastro'>
-                Cadastrar Veículo
+                Cadastrar
             </div>
         </div>
     </form>

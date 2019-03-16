@@ -7,7 +7,10 @@ const table = props => {
 
     return (
         <div className='table-section'>
-
+            <div className='btn' 
+                 onClick={props.cadastrar}>
+                Cadastrar veículo
+            </div>
             <div className='table-section__table'>
                 <table >
                     <caption>Carros cadastrados</caption>

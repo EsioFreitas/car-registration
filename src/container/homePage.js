@@ -13,30 +13,29 @@ class HomePage extends Component {
     state = {
         inputsContent: InputsHelper,
         dbState: DBHelper,
-        dataDownload: []
+        dataDownload: [],
+        showModal: false
     }
 
     render() {
         return (
             <main>
                 <h1>Cadastre seu veículo</h1>
+              {/*   <div style={{backgroundColor: 'red'}}
+                onClick={this.showModal}>Cadastrar veículo</div> */}
 
-                    <Modal show='true'>
+                <Modal show={this.state.showModal} cancelSubmit={this.cancelSubmit}>
                     <h2>cadastro</h2>
                     <Form inputs={this.state.inputsContent}
                             changed={this.changed}
-                            submit={this.submit} /> 
-                    </Modal>
-               
-                       
-                    
-                    
-                        <Table db={this.state.dbState}
-                            downloadData={this.downloadData}
-                            dataDownload={this.state.dataDownload} 
-                            tableClasses='t'/>
-                   
-               
+                            submit={this.submit} 
+                            cancelSubmit={this.cancelSubmit}/> 
+                </Modal>
+                
+                <Table db={this.state.dbState}
+                    downloadData={this.downloadData}
+                    dataDownload={this.state.dataDownload}
+                    cadastrar={this.showModal}/>
             </main>
         )
     }
@@ -99,6 +98,16 @@ class HomePage extends Component {
         tableCar.push(data);
 
         this.setState({ dbState: tableCar, inputChange: dataCar });
+
+        this.cancelSubmit();
+    }
+
+    showModal = () => {
+        this.setState({showModal: true});
+    }
+
+    cancelSubmit = () => {
+        this.setState({showModal: false});
     }
 }
 
