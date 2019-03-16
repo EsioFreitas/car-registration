@@ -20,9 +20,7 @@ class HomePage extends Component {
     render() {
         return (
             <main>
-                <h1>Cadastre seu veículo</h1>
-              {/*   <div style={{backgroundColor: 'red'}}
-                onClick={this.showModal}>Cadastrar veículo</div> */}
+                <h1 style={{textTransform: 'uppercase', fontWeight: 'bold'}}>Car registration</h1>
 
                 <Modal show={this.state.showModal} cancelSubmit={this.cancelSubmit}>
                     <h2>cadastro</h2>
