@@ -23,6 +23,9 @@
     }
 
     &__tbody {
+        tr {
+            transition: all .5s;
+        }
 
         tr:hover {
             background-color: #C2E5DF;
@@ -35,7 +38,7 @@
         padding: 15px 10px;
     }
 
-    caption{
+    caption {
         font-weight: bold;
         font-size: 1.5rem;
         margin-bottom: .5rem;
