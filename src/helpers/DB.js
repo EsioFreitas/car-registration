@@ -8,7 +8,10 @@ const DB =[
             renavam: '37065503111',
             placa: 'MZP-4935',
             cor: 'Marrom',
-            obs: '',
+            dono: {
+                nome: 'Pedro Henrique',
+                cpf: '12345678910'
+            }
         }
     },
     {
@@ -20,7 +23,10 @@ const DB =[
             renavam: '66538367744',
             placa: 'MZX-5148',
             cor: 'Prata',
-            obs: '',
+            dono: {
+                nome: 'Maria João',
+                cpf: '98765432100'
+            }
         }
     },
     {
@@ -32,7 +38,10 @@ const DB =[
             renavam: '22626789010',
             placa: 'MZX-0623',
             cor: 'Preto',
-            obs: '',
+            dono: {
+                nome: 'Carla Amanda',
+                cpf: '74185296300'
+            }
         }
     }
 ]
