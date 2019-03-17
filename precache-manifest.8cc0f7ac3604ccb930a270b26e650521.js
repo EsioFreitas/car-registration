@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "58f332a7d5a32ca89485",
-    "url": "/car-registration/static/css/main.617ef75e.chunk.css"
+    "revision": "f3cd10ffded8780e2d05",
+    "url": "/car-registration/static/css/main.772f0a2e.chunk.css"
   },
   {
-    "revision": "58f332a7d5a32ca89485",
-    "url": "/car-registration/static/js/main.8d73540c.chunk.js"
+    "revision": "f3cd10ffded8780e2d05",
+    "url": "/car-registration/static/js/main.0900937a.chunk.js"
   },
   {
     "revision": "b7472ac99c550179bcb4",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/car-registration/static/js/2.a2b1cf27.chunk.js"
   },
   {
-    "revision": "14e6a6886dff0a6d6a9e5abc3aa1abfa",
+    "revision": "96ce44feeba7be628c8fff5b3b4b6212",
     "url": "/car-registration/index.html"
   }
 ];

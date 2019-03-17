@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/car-registration/precache-manifest.1c1d8c37bc2425d157155ea70d679893.js"
+  "/car-registration/precache-manifest.8cc0f7ac3604ccb930a270b26e650521.js"
 );
 
 workbox.clientsClaim();

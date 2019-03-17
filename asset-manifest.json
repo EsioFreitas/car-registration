@@ -1,13 +1,13 @@
 {
-  "main.css": "/car-registration/static/css/main.617ef75e.chunk.css",
-  "main.js": "/car-registration/static/js/main.8d73540c.chunk.js",
-  "main.js.map": "/car-registration/static/js/main.8d73540c.chunk.js.map",
+  "main.css": "/car-registration/static/css/main.772f0a2e.chunk.css",
+  "main.js": "/car-registration/static/js/main.0900937a.chunk.js",
+  "main.js.map": "/car-registration/static/js/main.0900937a.chunk.js.map",
   "runtime~main.js": "/car-registration/static/js/runtime~main.ca8c4467.js",
   "runtime~main.js.map": "/car-registration/static/js/runtime~main.ca8c4467.js.map",
   "static/js/2.a2b1cf27.chunk.js": "/car-registration/static/js/2.a2b1cf27.chunk.js",
   "static/js/2.a2b1cf27.chunk.js.map": "/car-registration/static/js/2.a2b1cf27.chunk.js.map",
   "index.html": "/car-registration/index.html",
-  "precache-manifest.1c1d8c37bc2425d157155ea70d679893.js": "/car-registration/precache-manifest.1c1d8c37bc2425d157155ea70d679893.js",
+  "precache-manifest.8cc0f7ac3604ccb930a270b26e650521.js": "/car-registration/precache-manifest.8cc0f7ac3604ccb930a270b26e650521.js",
   "service-worker.js": "/car-registration/service-worker.js",
-  "static/css/main.617ef75e.chunk.css.map": "/car-registration/static/css/main.617ef75e.chunk.css.map"
+  "static/css/main.772f0a2e.chunk.css.map": "/car-registration/static/css/main.772f0a2e.chunk.css.map"
 }
