@@ -41,15 +41,17 @@ class HomePage extends Component {
     downloadData = () => {
         let data = [];
         this.state.dbState.forEach(element => {
+            console.log(element.car.dono['nome'])
             let dataEl = {
                 id: element.id,
+                proprietario: element.car.dono['nome'],
+                cpf: element.car.dono['cpf'],
                 marca: element.car['marca'],
                 modelo: element.car['modelo'],
                 ano: element.car['ano'],
                 renavam: element.car['renavam'],
                 placa: element.car['placa'],
-                cor: element.car['cor'],
-                obs: element.car['obs'],
+                cor: element.car['cor']
             };
 
             data.push(dataEl);
@@ -78,13 +80,16 @@ class HomePage extends Component {
         const data = {
             id: this.state.dbState.length + 1,
             car: {
+                dono: {
+                    nome: dataCar['dono'].value,
+                    cpf: dataCar['cpf'].value,
+                },                 
                 marca: dataCar['marca'].value,
                 modelo: dataCar['modelo'].value,
                 ano: dataCar['ano'].value,
                 renavam: dataCar['renavam'].value,
                 placa: dataCar['placa'].value,
                 cor: dataCar['cor'].value,
-                obs: dataCar['obs'].value,
             }
         }
 

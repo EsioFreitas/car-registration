@@ -1,5 +1,5 @@
 const inputs = {
-    nome: {
+    dono: {
         label: "Proprietário",
         type: 'input',
         config: {
