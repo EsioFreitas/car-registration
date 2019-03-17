@@ -1,4 +1,22 @@
 const inputs = {
+    nome: {
+        label: "Proprietário",
+        type: 'input',
+        config: {
+            type: 'text',
+            placeholder: 'Lucas Tavares'
+        },
+        value: '',
+    },
+    cpf: {
+        label: "CPF",
+        type: 'input',
+        config: {
+            type: 'number',
+            placeholder: '05749578506'
+        },
+        value: '',
+    },
     marca: {
         label: "Marca",
         type: 'input',
@@ -50,17 +68,6 @@ const inputs = {
         config: {
             type: 'text',
             placeholder: 'Verde'
-        },
-        value: '',
-    },
-    obs: {
-        label: "Observações",
-        type: 'textarea',
-        config: {
-            type: 'text',
-            placeholder: 'Coloque detalhes inportantes sobre seu veículo',
-            min: '1000',
-            max: '2020'
         },
         value: '',
     }
