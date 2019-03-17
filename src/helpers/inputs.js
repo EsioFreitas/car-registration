@@ -48,7 +48,7 @@ const inputs = {
         label: "Renavam",
         type: 'input',
         config: {
-            type: 'text',
+            type: 'number',
             placeholder: '69047446258'
         },
         value: '',

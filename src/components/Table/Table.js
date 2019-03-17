@@ -6,7 +6,6 @@ import './Table.scss';
 const table = props => {
     let dataTable = []
     props.db.forEach(element => {
-        console.log(element.car['marca'])
         let dataEl = {
             dono: element.car['dono'].nome,
             cpf: element.car['dono'].cpf,
@@ -47,7 +46,7 @@ const table = props => {
                     <tbody className='table-section__tbody'>
                         {
                             dataTable.sort( (a, b) => {
-                                return  a.dono < b.dono ? -1 : a.dono > b.dono ? 1 : 0
+                                return  a.dono.toUpperCase() < b.dono.toUpperCase() ? -1 : a.dono.toUpperCase() > b.dono.toUpperCase()   ? 1 : 0
                             }).map((db, idx )=> (
                             <tr  key={idx}>
                                 {Object.keys(db).map( el => (

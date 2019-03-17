@@ -14,26 +14,30 @@ class HomePage extends Component {
         inputsContent: InputsHelper,
         dbState: DBHelper,
         dataDownload: [],
-        showModal: false
+        showModal: false,
+        error: false
     }
 
     render() {
         return (
             <main>
-                <h1 style={{textTransform: 'uppercase', fontWeight: 'bold'}}>Car registration</h1>
+                <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold' }}>Car registration</h1>
 
                 <Modal show={this.state.showModal} cancelSubmit={this.cancelSubmit}>
-                    <h2>cadastro</h2>
+                    <h2 style={this.state.error ? { color: '#F2234C' } : null}>
+                        {this.state.error ? 'Carro já cadastrado' : 'cadastro'}
+                    </h2>
                     <Form inputs={this.state.inputsContent}
-                            changed={this.changed}
-                            submit={this.submit} 
-                            cancelSubmit={this.cancelSubmit}/> 
+                        changed={this.changed}
+                        submit={this.submit}
+                        cancelSubmit={this.cancelSubmit}
+                        disable={this.state.error} />
                 </Modal>
-                
+
                 <Table db={this.state.dbState}
                     downloadData={this.downloadData}
                     dataDownload={this.state.dataDownload}
-                    cadastrar={this.showModal}/>
+                    cadastrar={this.showModal} />
             </main>
         )
     }
@@ -41,7 +45,6 @@ class HomePage extends Component {
     downloadData = () => {
         let data = [];
         this.state.dbState.forEach(element => {
-            console.log(element.car.dono['nome'])
             let dataEl = {
                 id: element.id,
                 proprietario: element.car.dono['nome'],
@@ -77,13 +80,15 @@ class HomePage extends Component {
             dataCar['placa'].value === '') {
             return;
         }
+
+
         const data = {
             id: this.state.dbState.length + 1,
             car: {
                 dono: {
                     nome: dataCar['dono'].value,
                     cpf: dataCar['cpf'].value,
-                },                 
+                },
                 marca: dataCar['marca'].value,
                 modelo: dataCar['modelo'].value,
                 ano: dataCar['ano'].value,
@@ -106,11 +111,16 @@ class HomePage extends Component {
     }
 
     showModal = () => {
-        this.setState({showModal: true});
+        this.setState({ showModal: true });
     }
 
     cancelSubmit = () => {
-        this.setState({showModal: false});
+        this.setState({ showModal: false });
+        const dataCar = this.state.inputsContent;
+        for (let data in dataCar) {
+            dataCar[data].value = ''
+        }
+        this.setState({ inputChange: dataCar });
     }
 }
 
