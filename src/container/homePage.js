@@ -60,6 +60,10 @@ class HomePage extends Component {
             data.push(dataEl);
         });
 
+        data.sort( (a, b) => {
+            return  a.proprietario.toUpperCase() < b.proprietario.toUpperCase() ? -1 : a.dono.toUpperCase() > b.dono.toUpperCase()   ? 1 : 0
+        })
+
         this.setState({ dataDownload: data });
     }
 

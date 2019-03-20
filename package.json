@@ -6,10 +6,12 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
+    "npm": "^6.9.0",
     "react": "^16.8.4",
     "react-csv": "^1.1.1",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "start": "^5.1.0"
   },
   "scripts": {
     "predeploy": "npm run build",
